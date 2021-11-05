@@ -8,18 +8,18 @@ public class SellerDTO implements Serializable {
 
 	private static final long serialVersionUID = 1L;
 	private Long id;
-	private String nome;
+	private String name;
 
 	public SellerDTO(Seller entity) {
 
 		id = entity.getId();
-		nome = entity.getNome();
+		name = entity.getNome();
 	}
 
-	public SellerDTO(Long id, String nome) {
+	public SellerDTO(Long id, String name) {
 		super();
 		this.id = id;
-		this.nome = nome;
+		this.name = name;
 	}
 
 	public SellerDTO() {
@@ -35,11 +35,11 @@ public class SellerDTO implements Serializable {
 	}
 
 	public String getNome() {
-		return nome;
+		return name;
 	}
 
-	public void setNome(String nome) {
-		this.nome = nome;
+	public void setNome(String name) {
+		this.name = name;
 	}
 
 }

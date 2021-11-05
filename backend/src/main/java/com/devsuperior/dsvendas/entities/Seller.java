@@ -18,7 +18,7 @@ public class Seller {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
-	private String nome;
+	private String name;
 
 	@OneToMany(cascade = CascadeType.ALL,mappedBy = "seller")
 	private List<Sale> sales = new ArrayList<>();
@@ -32,17 +32,17 @@ public class Seller {
 	}
 
 	public String getNome() {
-		return nome;
+		return name;
 	}
 
-	public void setNome(String nome) {
-		this.nome = nome;
+	public void setNome(String name) {
+		this.name = name;
 	}
 
-	public Seller(Long id, String nome) {
+	public Seller(Long id, String name) {
 		super();
 		this.id = id;
-		this.nome = nome;
+		this.name = name;
 	}
 
 	public List<Sale> getSales() {
